@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.balance {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#lista-transacciones {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#lista-transacciones li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.ingreso {
+    border-color: #28a745;
+}
+
+.gasto {
+    border-color: #dc3545;
+}

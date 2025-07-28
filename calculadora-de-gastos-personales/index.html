@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Calculadora de Gastos Personales</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+    <h1>💸 Calculadora de Gastos</h1>
+
+    <div class="balance">
+        <h2>Saldo: <span id="saldo">$0</span></h2>
+        <p>Ingresos: <span id="ingresos">$0</span> | Gastos: <span id="gastos">$0</span></p> | Inversiones: <span id="inversiones">$0</span>
+    </div>
+
+    <form id="formulario">
+        <label for="descripcion">Descripción</label>
+        <input type="text" id="descripcion" placeholder="Descripción" required />
+        <label for="monto">Monto</label>
+        <input type="number" id="monto" placeholder="Monto" required />
+        <label for="tipo">Tipo</label>
+        <select id="tipo">
+            <option value="ingreso">Ingreso</option>
+            <option value="inversion">Inversión</option>
+            <option value="gasto">Gasto</option>
+        </select>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <ul id="lista-transacciones"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
