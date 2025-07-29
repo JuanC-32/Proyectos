@@ -42,7 +42,7 @@ calculadora-de-gastos-personales/
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/JuanC-32/Proyectos.git
+git clone https://github.com/JuanC-32/Proyectos/tree/master/calculadora-de-gastos
 
-cd calculadora-de-gastos-personales
+cd calculadora-de-gastos
 start index.html

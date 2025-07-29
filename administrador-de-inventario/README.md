@@ -2,8 +2,6 @@
 
 Este proyecto es una aplicación web simple para gestionar productos en inventario. Permite agregar, visualizar y eliminar productos de manera dinámica utilizando tecnologías web básicas.
 
-![Captura del proyecto](./screenshot.png) <!-- Opcional: añade una imagen representativa -->
-
 ## 🚀 Tecnologías Utilizadas
 
 - HTML5
@@ -18,4 +16,21 @@ Este proyecto es una aplicación web simple para gestionar productos en inventar
 - Almacenamiento en memoria mientras la sesión está activa.
 
 ## 📂 Estructura del Proyecto
+
+📁 administrador-de-inventario
+|---index.html
+|---style.css
+|---app.js
+|---README.md
+
+---
+
+## 🔧 Instalación y uso
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/JuanC-32/Proyectos/tree/master/administrador-de-inventario
+
+cd administrador-de-inventario
+start index.html
 
