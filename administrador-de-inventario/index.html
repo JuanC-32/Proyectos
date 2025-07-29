@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>📦 Administrador de Inventario</h1>
+
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre del producto" required>
+        <input type="number" id="cantidad" placeholder="Cantidad" required>
+        <input type="number" id="precio" placeholder="Precio unitario" required>
+        <button type="submit">Agregar producto</button>
+    </form>
+
+    <table id="tabla-inventario">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+                <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí van los productos -->
+    </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
