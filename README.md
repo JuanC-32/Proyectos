@@ -12,6 +12,7 @@ Cada carpeta contiene un proyecto completo con su propio código fuente, archivo
 | Proyecto | Descripción | Tecnologías |
 |---------|-------------|-------------|------|
 | 💸 [Calculadora de Gastos](./calculadora-gastos) | Registro de ingresos/gastos/inversiones, saldo total, historial | HTML, CSS, JS | 
+| 🛒 [Administrador de Inventario](./administrador-de-inventario) | Sistema para controlar productos y stock en pequeñas tiendas | HTML, CSS, JS |
 
 ---
 
