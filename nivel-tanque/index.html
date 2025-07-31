@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Nivel de Tanque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tanque-container">
+        <h2>Control de Nivel de Tanque</h2>
+        <div class="tanque">
+            <div class="nivel" id="nivel" style="height: 0%;"></div>
+            <div class="nivel-texto" id="nivel-texto">0%</div>
+        </div>
+        <div class="controles">
+            <button onclick="llenarTanque(10); actualizarVista();">Llenar +10</button>
+            <button onclick="vaciarTanque(10); actualizarVista();">Vaciar -10</button>
+            <button onclick="reiniciarTanque(); actualizarVista();">Reiniciar</button>
+            <button onclick="ajustarNivelTanque(50); actualizarVista();">Ajustar a 50%</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Actualiza la vista del tanque según el nivel actual
+        function actualizarVista() {
+            const nivelElem = document.getElementById('nivel');
+            const textoElem = document.getElementById('nivel-texto');
+            const porcentaje = Math.round((nivelTanque / nivelMaximo) * 100);
+            nivelElem.style.height = porcentaje + '%';
+            textoElem.textContent = porcentaje + '%';
+        }
+        // Inicializa la vista al cargar
+        document.addEventListener('DOMContentLoaded', actualizarVista);
+    </script>
+</body>
+</html>
