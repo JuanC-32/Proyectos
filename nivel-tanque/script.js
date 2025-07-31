@@ -6,7 +6,7 @@ function llenarTanque(cantidad) {
     if (nivelTanque > nivelMaximo) {
         nivelTanque = nivelMaximo;
     }
-    console.log(`Nivel de tanque: ${nivelTanque}`);
+    actualizarVista();
 }
 
 function vaciarTanque(cantidad) {
@@ -14,63 +14,41 @@ function vaciarTanque(cantidad) {
     if (nivelTanque < 0) {
         nivelTanque = 0;
     }
-    console.log(`Nivel de tanque: ${nivelTanque}`);
+    actualizarVista();
 }
 
 function mostrarNivelTanque() {
+    // Esta función ya no es necesaria para la interfaz gráfica,
+    // pero puedes usarla para depuración si lo deseas.
     console.log(`Nivel actual del tanque: ${nivelTanque}`);
 }
 
 function reiniciarTanque() {
     nivelTanque = 0;
-    console.log(`Tanque reiniciado. Nivel actual: ${nivelTanque}`);
+    actualizarVista();
 }
 
 function ajustarNivelTanque(nuevoNivel) {
     if (nuevoNivel < 0 || nuevoNivel > nivelMaximo) {
-        console.log("Nivel fuera de rango. Debe estar entre 0 y 100.");
+        alert("Nivel fuera de rango. Debe estar entre 0 y 100.");
         return;
     }
     nivelTanque = nuevoNivel;
-    console.log(`Nivel ajustado del tanque: ${nivelTanque}`);
-}   
-
-function mostrarMenu() {
-    console.log("1. Llenar tanque");
-    console.log("2. Vaciar tanque");
-    console.log("3. Mostrar nivel de tanque");
-    console.log("4. Reiniciar tanque");
-    console.log("5. Ajustar nivel de tanque");
-    console.log("6. Salir");
+    actualizarVista();
 }
 
-function ejecutarOpcion(opcion) {
-    switch (opcion) {
-        case 1:
-            llenarTanque(10);
-            break;
-        case 2:
-            vaciarTanque(10);
-            break;
-        case 3:
-            mostrarNivelTanque();
-            break;
-        case 4:
-            reiniciarTanque();
-            break;
-        case 5:
-            ajustarNivelTanque(50);
-            break;
-        case 6:
-            console.log("Saliendo...");
-            break;
-        default:
-            console.log("Opción no válida.");
-    }
+// Actualiza la vista del tanque según el nivel actual
+function actualizarVista() {
+    const nivelElem = document.getElementById('nivel');
+    const textoElem = document.getElementById('nivel-texto');
+    const porcentaje = Math.round((nivelTanque / nivelMaximo) * 100);
+    if (nivelElem) nivelElem.style.height = porcentaje + '%';
+    if (textoElem) textoElem.textContent = porcentaje + '%';
 }
 
+// Inicializa la vista
 document.addEventListener("DOMContentLoaded", () => {
     mostrarMenu();
     const opcion = parseInt(prompt("Seleccione una opción:"));
     ejecutarOpcion(opcion);
-});  
+});
