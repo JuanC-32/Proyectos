@@ -1,0 +1,220 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fff7eb;
+  color: #222;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(to right, #ff6b00, #ffb800);
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 70px;
+  background: transparent;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #222;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d62828;
+}
+
+/* Hero principal */
+.hero {
+  background: linear-gradient(to right, #ff6b00, #ffb800);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+/* Secciones */
+section {
+  padding: 3rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #d62828;
+  text-align: center;
+}
+
+/* Menú */
+.menu .productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.producto {
+  background: #fff;
+  border: 2px solid #ffd166;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: 2px solid #ffb800;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.producto p {
+  font-weight: bold;
+  color: #d62828;
+}
+
+.producto span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Nosotros */
+.nosotros {
+  background-color: #ffeabf;
+  text-align: center;
+  border-top: 3px solid #ffb800;
+  border-bottom: 3px solid #ffb800;
+}
+
+.nosotros p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Pedidos */
+.pedidos {
+  text-align: center;
+  background-color: #fff2cc;
+}
+
+.pedidos p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 90%;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        width: 90px;
+    }
+}
+
